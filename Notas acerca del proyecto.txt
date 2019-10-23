@@ -1,0 +1,21 @@
+Notas:
+
+Menu desplegable (medidas):
+Desplegado: 190
+Recortado: 49
+------------------------------------------
+Colores background rgb:
+
+Panel menu/header: 27, 57, 106
+Botones en menu
+OnHover: 40, 54, 85
+Active: 77, 100, 141
+---------------------------------
+Tamaño canvas: 831, 524
+
+
+
+
+
+
+
