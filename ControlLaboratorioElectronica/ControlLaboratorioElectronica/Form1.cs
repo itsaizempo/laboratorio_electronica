@@ -16,5 +16,32 @@ namespace ControlLaboratorioElectronica
 		{
 			InitializeComponent();
 		}
+
+		private void btnMenu_Click(object sender, EventArgs e)
+		{
+			despliegueMenu();
+		}
+
+		private void despliegueMenu()
+		{
+			if (panelMenu.Width == 49)
+			{
+				panelMenu.Visible = false;
+				panelMenu.Width = 190;
+				panelTransicion.ShowSync(panelMenu);
+			}
+			else
+			{
+				panelMenu.Visible = false;
+				panelMenu.Width = 49;
+				panelTransicion.ShowSync(panelMenu);
+
+			}
+		}
+
+		private void canvas_MouseClick(object sender, MouseEventArgs e)
+		{
+			despliegueMenu();
+		}
 	}
 }
