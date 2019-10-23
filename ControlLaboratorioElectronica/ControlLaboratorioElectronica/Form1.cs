@@ -43,5 +43,31 @@ namespace ControlLaboratorioElectronica
 		{
 			despliegueMenu();
 		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
+
+		private void FillCanvas(Form fh)
+		{
+			if (canvas.Controls.Count > 0)
+				canvas.Controls.RemoveAt(0);
+			fh.TopLevel = false;
+			fh.FormBorderStyle = FormBorderStyle.None;
+			fh.Dock = DockStyle.Fill;
+			canvas.Controls.Add(fh);
+			canvas.Tag = fh;
+			fh.Show();
+		}
+
+		private void btnPrincipal_Click(object sender, EventArgs e)
+		{
+			var form = Application.OpenForms.OfType<canvasPrincipal>().FirstOrDefault();
+			var reg = form ?? new canvasPrincipal();
+			FillCanvas(reg);
+			if (panelMenu.Width > 49)
+				despliegueMenu();
+		}
 	}
 }

@@ -12,6 +12,12 @@ OnHover: 40, 54, 85
 Active: 77, 100, 141
 ---------------------------------
 Tamaño canvas: 831, 524
+---------------------------------
+Colores en general
+
+Principal: 27, 57, 106
+Secundario: 40, 54, 85
+Terciario: 77, 100, 141 (si se necesita)
 
 
 
