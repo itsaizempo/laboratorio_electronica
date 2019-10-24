@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlLaboratorioElectronica.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,7 @@ namespace ControlLaboratorioElectronica
 			Form frm = canvas.Controls.OfType<Form>().Where(o => o.Name.Contains("canvasPrincipal")).FirstOrDefault();
 			if (frm == null)
 			{
+				canvas.Controls.Clear();
 				var form = Application.OpenForms.OfType<canvasPrincipal>().FirstOrDefault();
 				var reg = form ?? new canvasPrincipal();
 				FillCanvas(reg);
@@ -78,6 +80,34 @@ namespace ControlLaboratorioElectronica
 			fh.Show();
 		}
 
+		private void btnPrestamosExt_Click(object sender, EventArgs e)
+		{
+			
+			Form frm = canvas.Controls.OfType<Form>().Where(o => o.Name.Contains("canvasPrestamosExt")).FirstOrDefault();
+			if (frm == null)
+			{
+				canvas.Controls.Clear();
+				var form = Application.OpenForms.OfType<canvasPrestamosExt>().FirstOrDefault();
+				var reg = form ?? new canvasPrestamosExt();
+				FillCanvas(reg);
+			}
+			if (panelMenu.Width > 49)
+				despliegueMenu();
+		}
 
+		private void btnEstadistico_Click(object sender, EventArgs e)
+		{
+			
+			Form frm = canvas.Controls.OfType<Form>().Where(o => o.Name.Contains("canvasEstadistico")).FirstOrDefault();
+			if (frm == null)
+			{
+				canvas.Controls.Clear();
+				var form = Application.OpenForms.OfType<canvasEstadistico>().FirstOrDefault();
+				var reg = form ?? new canvasEstadistico();
+				FillCanvas(reg);
+			}
+			if (panelMenu.Width > 49)
+				despliegueMenu();
+		}
 	}
 }

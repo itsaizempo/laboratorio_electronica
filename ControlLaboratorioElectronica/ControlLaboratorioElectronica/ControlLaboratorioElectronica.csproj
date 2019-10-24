@@ -53,8 +53,19 @@
   <ItemGroup>
     <Compile Include="Modelos\Alumno.cs" />
     <Compile Include="Modelos\Docente.cs" />
-    <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
+    <Compile Include="Vistas\canvasEstadistico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\canvasEstadistico.Designer.cs">
+      <DependentUpon>canvasEstadistico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\canvasPrestamosExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\canvasPrestamosExt.Designer.cs">
+      <DependentUpon>canvasPrestamosExt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\canvasPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +80,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vistas\canvasEstadistico.resx">
+      <DependentUpon>canvasEstadistico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\canvasPrestamosExt.resx">
+      <DependentUpon>canvasPrestamosExt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\canvasPrincipal.resx">
       <DependentUpon>canvasPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controlador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="recursos\limpiar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
