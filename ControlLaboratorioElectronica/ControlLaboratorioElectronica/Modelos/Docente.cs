@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ControlLaboratorioElectronica.Modelos
 {
-	class Docente:Persona
+	class Docente
 	{
-		public string Documento { get; set; }
+		
 	}
 }
