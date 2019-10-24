@@ -15,6 +15,9 @@ namespace ControlLaboratorioElectronica
 		public Form1()
 		{
 			InitializeComponent();
+			var form = Application.OpenForms.OfType<canvasPrincipal>().FirstOrDefault();
+			var reg = form ?? new canvasPrincipal();
+			FillCanvas(reg);
 		}
 
 		private void btnMenu_Click(object sender, EventArgs e)
@@ -49,6 +52,20 @@ namespace ControlLaboratorioElectronica
 			Environment.Exit(0);
 		}
 
+		
+
+		private void btnPrincipal_Click(object sender, EventArgs e)
+		{
+			Form frm = canvas.Controls.OfType<Form>().Where(o => o.Name.Contains("canvasPrincipal")).FirstOrDefault();
+			if (frm == null)
+			{
+				var form = Application.OpenForms.OfType<canvasPrincipal>().FirstOrDefault();
+				var reg = form ?? new canvasPrincipal();
+				FillCanvas(reg);
+			}
+			if (panelMenu.Width > 49)
+				despliegueMenu();
+		}
 		private void FillCanvas(Form fh)
 		{
 			if (canvas.Controls.Count > 0)
@@ -61,13 +78,6 @@ namespace ControlLaboratorioElectronica
 			fh.Show();
 		}
 
-		private void btnPrincipal_Click(object sender, EventArgs e)
-		{
-			var form = Application.OpenForms.OfType<canvasPrincipal>().FirstOrDefault();
-			var reg = form ?? new canvasPrincipal();
-			FillCanvas(reg);
-			if (panelMenu.Width > 49)
-				despliegueMenu();
-		}
+
 	}
 }

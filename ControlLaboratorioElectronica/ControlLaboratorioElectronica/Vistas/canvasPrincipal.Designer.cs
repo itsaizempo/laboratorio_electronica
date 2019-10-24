@@ -107,6 +107,8 @@
 			// 
 			// dgvDocentes
 			// 
+			this.dgvDocentes.AllowUserToResizeColumns = false;
+			this.dgvDocentes.AllowUserToResizeRows = false;
 			this.dgvDocentes.BackgroundColor = System.Drawing.Color.White;
 			this.dgvDocentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,6 +138,7 @@
 			this.Detalles.HeaderText = "Detalles";
 			this.Detalles.Name = "Detalles";
 			this.Detalles.Text = "Detalles";
+			this.Detalles.UseColumnTextForButtonValue = true;
 			// 
 			// canvasPrincipal
 			// 
@@ -147,6 +150,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "canvasPrincipal";
 			this.Text = "canvasPrincipal";
+			this.Load += new System.EventHandler(this.canvasPrincipal_Load);
 			((System.ComponentModel.ISupportInitialize)(this.btnNuevoDocente)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
